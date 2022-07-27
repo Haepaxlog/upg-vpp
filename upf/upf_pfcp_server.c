@@ -1134,9 +1134,9 @@ void upf_pfcp_server_deferred_free_msgs_by_node (u32 node)
 void upf_server_send_heartbeat (u32 node_idx)
 {
   pfcp_server_main_t *psm = &pfcp_server_main;
-  pfcp_decoded_msg_t dmsg =
-  {
-  .type = PFCP_HEARTBEAT_REQUEST};
+  pfcp_decoded_msg_t dmsg = {
+    .type = PFCP_HEARTBEAT_REQUEST
+  };
   pfcp_heartbeat_request_t *req = &dmsg.heartbeat_request;
   upf_main_t *gtm = &upf_main;
   upf_node_assoc_t *n;

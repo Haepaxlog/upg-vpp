@@ -2574,7 +2574,7 @@ process_urrs (vlib_main_t * vm, upf_session_t * sess,
 
 u32
 process_qers (vlib_main_t * vm, upf_session_t * sess,
-	      struct rules * r,
+	      struct rules *r,
 	      upf_pdr_t * pdr, vlib_buffer_t * b,
 	      u8 is_dl, u8 is_ul, u32 next)
 {
@@ -2599,7 +2599,7 @@ process_qers (vlib_main_t * vm, upf_session_t * sess,
   {
     upf_qer_t *qer = pfcp_get_qer_by_id (r, *qer_id);
     upf_qer_policer_t *pol;
-    u32 col __attribute__ ((unused));
+    u32 col __attribute__((unused));
 
     if (!qer)
       continue;
